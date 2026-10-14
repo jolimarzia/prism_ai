@@ -62,7 +62,7 @@ def _make_text_image(text: str, path: Path, size=(1280, 720)):
 def build_video(script_lines, out_name: str = "video.mp4",
                 seconds_per_line: int = 3) -> Path:
     """Build an MP4 slideshow from a list of text lines."""
-    from moviepy.editor import ImageClip, concatenate_videoclips
+    from moviepy import ImageClip, concatenate_videoclips
 
     clips = []
     for i, line in enumerate(script_lines):
