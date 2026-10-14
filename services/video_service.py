@@ -66,9 +66,11 @@ def build_video(script_lines, out_name: str = "video.mp4",
 
     clips = []
     for i, line in enumerate(script_lines):
-        img_path = _video_tmp / f"scene_{i}.png"
-        _make_text_image(line, img_path)
-        clips.append(ImageClip(str(img_path)).set_duration(seconds_per_line))
+    img_path = _video_tmp / f"scene_{i}.png"
+    _make_text_image(line, img_path)
+    clips.append(
+        ImageClip(str(img_path)).with_duration(seconds_per_line)
+    )
 
     final = concatenate_videoclips(clips, method="compose")
     out_path = DATA_DIR / out_name
