@@ -1,0 +1,32 @@
+[
+  {
+    "title": "A cute cat sitting in a flower garden",
+    "prompt": "A cute cat sitting in a flower garden",
+    "enhanced_prompt": "Cute fluffy kitten perched gracefully on a mossy stone bench amid a vibrant flower garden, surrounded by blooming roses, lavender, and sunflowers bathed in golden late-afternoon light; soft pastel colors, gentle bokeh background, delicate petals swirling in a light breeze, hyper‑realistic texture with sparkling eyes and whiskers, whimsical yet realistic style.",
+    "width": 768,
+    "height": 768,
+    "file_path": "C:\\Users\\UESR\\Desktop\\prism\\data\\files\\image\\img_3.png",
+    "id": "e4d5af1c-fd8d-4b9c-b7af-161fa50edfe5",
+    "timestamp": "2026-10-14T10:25:39.769101"
+  },
+  {
+    "title": "a cat sleeping beside a window",
+    "prompt": "a cat sleeping beside a window",
+    "enhanced_prompt": "A serene feline figure reclines languidly beside a tall, multi-paned window, its eyes closed in blissful sleep, as soft, diffused natural light from beyond the glass casts a warm, ethereal glow on the cat's fur, with a gentle breeze rustling the leaves of a nearby tree outside, and surrounding landscape bathed in a soft, muted light.",
+    "width": 640,
+    "height": 640,
+    "file_path": "C:\\Users\\UESR\\Desktop\\prism\\data\\files\\image\\img_2.png",
+    "id": "62749a24-9d40-47cd-93ad-7c56460a9738",
+    "timestamp": "2026-10-13T14:46:16.948655"
+  },
+  {
+    "title": "a red apple",
+    "prompt": "a red apple",
+    "enhanced_prompt": "A solitary, glossy red apple, suspended in mid-air, against a warm, golden light backdrop, with subtle, intricate details visible on its skin, and a slight, inviting sheen on its surface, as if it's about to be plucked from its stem.",
+    "width": 640,
+    "height": 640,
+    "file_path": "C:\\Users\\UESR\\Desktop\\prism\\data\\files\\image\\img_1.png",
+    "id": "7fa8e332-6015-46f7-afff-e5624ba2e157",
+    "timestamp": "2026-10-13T14:45:32.546659"
+  }
+]
