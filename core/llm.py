@@ -1,12 +1,15 @@
+
 import os
+import streamlit as st
 from openai import OpenAI
 from core.config import OLLAMA_URL, EMBED_MODEL
 
-# ==================================================
 # DUAL PROVIDER: Ollama (local) OR Groq (cloud)
-# ==================================================
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "").strip()
+GROQ_API_KEY = str(
+    st.secrets.get("GROQ_API_KEY", "")
+    or os.getenv("GROQ_API_KEY", "")
+).strip()
 
 if GROQ_API_KEY:
     # Cloud mode: Groq
