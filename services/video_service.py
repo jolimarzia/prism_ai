@@ -65,21 +65,29 @@ def build_video(script_lines, out_name: str = "video.mp4",
     from moviepy import ImageClip, concatenate_videoclips
 
     clips = []
+
     for i, line in enumerate(script_lines):
-    img_path = _video_tmp / f"scene_{i}.png"
-    _make_text_image(line, img_path)
-    clips.append(
-        ImageClip(str(img_path)).with_duration(seconds_per_line)
-    )
+        img_path = _video_tmp / f"scene_{i}.png"
+        _make_text_image(line, img_path)
+        clips.append(
+            ImageClip(str(img_path)).with_duration(seconds_per_line)
+        )
+
+    if not clips:
+        raise ValueError("ভিডিও তৈরির জন্য কোনো script line নেই।")
 
     final = concatenate_videoclips(clips, method="compose")
     out_path = DATA_DIR / out_name
-    final.write_videofile(
-        str(out_path),
-        fps=24,
-        codec="libx264",
-        audio=False,
-        logger=None,
-    )
-    final.close()
+
+    try:
+        final.write_videofile(
+            str(out_path),
+            fps=24,
+            codec="libx264",
+            audio=False,
+            logger=None,
+        )
+    finally:
+        final.close()
+
     return out_path
